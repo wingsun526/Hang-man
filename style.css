@@ -1,0 +1,77 @@
+html{
+    background-color: aliceblue;
+}
+
+.top {
+    background-color: antiquewhite;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.hang-man{
+    background-color: aquamarine;
+    height: 100%;
+    flex: 1;
+}
+
+.guess{
+    background-color: rgb(212, 172, 172);
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    letter-spacing: 3px;
+    font-family: monospace;
+}
+.bot{
+    display: flex;
+    position: relative;
+}
+.chars{
+    background-color: burlywood;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+}
+
+.keys{
+    display: flex;
+    background-color: cornsilk;
+    padding: 2px;
+    height: 1em;
+    width: 1em;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.keys.excluded{
+    opacity: 0.1;
+    text-decoration: line-through;
+}
+.buttons {
+    position: absolute;
+    font-size: 40px;
+    left: 20px;
+}
+#new-game {
+    font-size: 20px;
+    font-family: Comic Sans MS;
+}
+
+.stats{
+    position: absolute;
+    font-size: 30px;
+    float: right;
+    right: 5px;
+    font-family: Comic Sans MS;
+}
