@@ -9,6 +9,8 @@ let gameGuess
 let displayGuess = document.querySelector('.guess')
 displayGuess.innerText = gameGuess
 let chances = document.getElementById('chances')
+let bgHangMan = document.querySelector(".hang-man")
+
 
 //board handling
 function drawBoard () {
@@ -17,6 +19,7 @@ function drawBoard () {
   gameGuess = gameWord.replace(/\w/g, '_')
   displayGuess.innerText = gameGuess
   chances.innerText = '6'
+  bgHangMan.style.backgroundImage = `url('assets/hangman0.png')`;
 
   //new characters selections
   let chars = document.querySelector(".chars")
@@ -42,6 +45,7 @@ document.addEventListener("keydown", (e)=> {
   let key = document.getElementById(`${e.key}`)
   key.classList.add("excluded")
   takeGuess(gameWord, gameGuess, e.key)
+  
 })
 
 
@@ -61,6 +65,8 @@ function takeGuess(word, guess, char) {
     displayGuess.innerText = gameGuess
     if (!gameWord.includes(char) && chances.innerText>0) {
       chances.innerText--;
+      let tempNum = 6 - chances.innerText
+      bgHangMan.style.backgroundImage = `url('assets/hangman${tempNum}.png')`
       
     }
     if (!gameGuess.includes('_') && !chances.innerText.includes('Win') && !chances.innerText.includes('Lose')) {

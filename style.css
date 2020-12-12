@@ -3,20 +3,24 @@ html{
 }
 
 .top {
-    background-color: antiquewhite;
+    //background-color: antiquewhite;
     height: 50vh;
     display: flex;
     flex-direction: row;
 }
 
 .hang-man{
-    background-color: aquamarine;
+    
+    background-image: url("assets/hangman0.png");
+    background-repeat: no-repeat;
+    position: relative;
     height: 100%;
     flex: 1;
+    background-size: contain;
 }
 
 .guess{
-    background-color: rgb(212, 172, 172);
+    //background-color: rgb(212, 172, 172);
     height: 100%;
     flex: 1;
     display: flex;
@@ -31,7 +35,7 @@ html{
     position: relative;
 }
 .chars{
-    background-color: burlywood;
+    //background-color: burlywood;
     height: 50vh;
     margin: auto;
     display: flex;
@@ -52,11 +56,27 @@ html{
     align-items: center;
     margin-left: 10px;
     margin-top: 5px;
+    //transition: all 1s cubic-bezier(.3,-0.26,.36,.89);
+    transition: all 0.5s ease-in-out;
 }
 
+/*@keyframes example {
+    5%   {
+        transform: translate(20px, -15px);
+    }
+
+    100% {
+        transform: translateY(500px)  rotateX(600deg);
+        opacity: 0;
+    }
+}*/
 .keys.excluded{
-    opacity: 0.1;
+    opacity: 0;
     text-decoration: line-through;
+    //transform: translateY(500px);
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 .buttons {
     position: absolute;
